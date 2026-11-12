@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Check out source and JUCE submodule
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -62,7 +62,7 @@ jobs:
           Compress-Archive -Path "$stage\*" -DestinationPath "MTRX-1K-Windows-x64.zip" -Force
 
       - name: Upload compiled package
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: MTRX-1K-Windows-x64
           path: MTRX-1K-Windows-x64.zip
